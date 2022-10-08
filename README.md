@@ -1,16 +1,15 @@
-# pics_lab
+# Picslab
 
-A new Flutter project.
+A new Photo Editing Flutter project where you can edit your photos.
 
-## Getting Started
+# Features
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- Pick Image
+- Add Text
+- Bold Text
+- Italic Text
+- Add New Line
+- Align Text Left, Right & Center
+- Change Colour
+- Increase Font Size
+- Decrease Font Size
