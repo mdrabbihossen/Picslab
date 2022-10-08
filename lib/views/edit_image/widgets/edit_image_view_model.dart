@@ -1,15 +1,31 @@
 import 'package:flutter/material.dart';
 import 'package:pics_lab/common/widgets/deafult_button.dart';
+import 'package:pics_lab/model/text_info.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 
 abstract class EditImageViewModel extends State<EditImageScreen> {
   // controllers and variables
   TextEditingController textEditingController = TextEditingController();
+  List<TextInfo> texts = [];
 
   // add new text
 
   addNewText(BuildContext context) {
-    setState(() {});
+    setState(() {
+      texts.add(
+        TextInfo(
+          text: textEditingController.text,
+          left: 0,
+          top: 0,
+          color: Colors.black,
+          fontWeight: FontWeight.normal,
+          fontStyle: FontStyle.normal,
+          fontSize: 20,
+          textAlign: TextAlign.left,
+        ),
+      );
+      Navigator.of(context).pop();
+    });
   }
 
   // add new text end
