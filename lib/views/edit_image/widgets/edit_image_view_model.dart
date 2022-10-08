@@ -3,7 +3,7 @@ import 'package:pics_lab/common/widgets/deafult_button.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 
 abstract class EditImageViewModel extends State<EditImageScreen> {
-  // controllers
+  // controllers and variables
   TextEditingController textEditingController = TextEditingController();
 
   // add new text
