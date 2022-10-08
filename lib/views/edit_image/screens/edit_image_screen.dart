@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'dart:io';
 
 import 'package:pics_lab/views/edit_image/widgets/add_new_text_fab.dart';
+import 'package:pics_lab/views/edit_image/widgets/app_bar.dart';
 import 'package:pics_lab/views/edit_image/widgets/edit_image_view_model.dart';
 import 'package:pics_lab/views/edit_image/widgets/image_text.dart';
 
@@ -22,6 +23,7 @@ class _EditImageScreenState extends EditImageViewModel {
   Widget build(BuildContext context) {
     final size = MediaQuery.of(context).size;
     return Scaffold(
+      appBar: appBar(),
       body: SafeArea(
         child: SizedBox(
           height: size.height * 0.3,

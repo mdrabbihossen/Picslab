@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
-import 'package:pics_lab/common/widgets/deafult_button.dart';
+
 import 'package:pics_lab/model/text_info.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
+import 'package:pics_lab/views/edit_image/widgets/default_button.dart';
 
 abstract class EditImageViewModel extends State<EditImageScreen> {
   // controllers and variables
