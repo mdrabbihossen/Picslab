@@ -161,5 +161,15 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
       }
     });
   }
+
 // add lines end
+  // delete text
+  deleteText(BuildContext context) {
+    setState(() {
+      texts.removeAt(currentIndex);
+      currentIndex = 0;
+    });
+    showSnackBar(context: context, message: 'Text Deleted Successfully');
+  }
+// delete text end
 }
