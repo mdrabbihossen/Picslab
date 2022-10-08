@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
 
+import 'package:pics_lab/views/edit_image/widgets/add_new_text_fab.dart';
+
 class EditImageScreen extends StatefulWidget {
   final String selectedImage;
 
@@ -20,6 +22,7 @@ class _EditImageScreenState extends State<EditImageScreen> {
       body: Image.file(
         File(widget.selectedImage),
       ),
+      floatingActionButton: addNewTextFAB(),
     );
   }
 }
