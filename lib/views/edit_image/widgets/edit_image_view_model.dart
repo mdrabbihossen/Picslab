@@ -102,7 +102,7 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
 
 // decrease font size end
   // align text left
-  alignLeft() {
+  alignTextLeft() {
     setState(() {
       texts[currentIndex].textAlign = TextAlign.left;
     });
@@ -147,5 +147,19 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
       }
     });
   }
+
 // italic text end
+  // add lines
+  addLinesToText() {
+    setState(() {
+      if (texts[currentIndex].text.contains('\n')) {
+        texts[currentIndex].text =
+            texts[currentIndex].text.replaceAll('\n', ' ');
+      } else {
+        texts[currentIndex].text =
+            texts[currentIndex].text.replaceAll(' ', '\n');
+      }
+    });
+  }
+// add lines end
 }

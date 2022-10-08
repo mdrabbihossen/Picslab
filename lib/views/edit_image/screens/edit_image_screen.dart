@@ -129,7 +129,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Decrease Font Size',
               ),
               IconButton(
-                onPressed: alignLeft,
+                onPressed: alignTextLeft,
                 icon: Icon(
                   Icons.format_align_left,
                   color: Colors.black,
@@ -169,7 +169,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Italic Text',
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: addLinesToText,
                 icon: Icon(
                   Icons.space_bar,
                   color: Colors.black,
