@@ -1,7 +1,12 @@
+import 'dart:typed_data';
+
 import 'package:flutter/material.dart';
+import 'package:image_gallery_saver/image_gallery_saver.dart';
+import 'package:permission_handler/permission_handler.dart';
 import 'package:pics_lab/common/widgets/showSnackbar.dart';
 
 import 'package:pics_lab/model/text_info.dart';
+import 'package:pics_lab/utils/utils.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 import 'package:pics_lab/views/edit_image/widgets/default_button.dart';
 import 'package:screenshot/screenshot.dart';
@@ -173,11 +178,35 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     });
     showSnackBar(context: context, message: 'Text Deleted Successfully');
   }
+
 // delete text end
 
-// save image to gallery
- saveImageToGallery(BuildContext context)async{
+// save  to gallery
+  saveToGallery(BuildContext context) {
+    if (texts.isNotEmpty) {
+      screenshotController.capture().then((Uint8List? image) {
+        saveImage(image!);
+        showSnackBar(
+            context: context, message: 'Image Saved to gallery Successfully');
+      }).catchError(
+        (onError) => showSnackBar(
+          context: context,
+          message: onError.toString(),
+        ),
+      );
+    }
+  }
 
- }
-// save image to gallery end
+// save  to gallery end
+// save image
+  saveImage(Uint8List bytes) async {
+    final time = DateTime.now()
+        .toIso8601String()
+        .replaceAll('.', '-')
+        .replaceAll(':', '-');
+    final name = 'image$time.png';
+    await requestPermission(Permission.storage);
+    await ImageGallerySaver.saveImage(bytes, name: name);
+  }
+// save image end
 }

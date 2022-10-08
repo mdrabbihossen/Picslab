@@ -112,7 +112,7 @@ class _EditImageScreenState extends EditImageViewModel {
             scrollDirection: Axis.horizontal,
             children: [
               IconButton(
-                onPressed: () {},
+                onPressed: () => saveToGallery(context),
                 icon: Icon(
                   Icons.save,
                   color: Colors.black,
