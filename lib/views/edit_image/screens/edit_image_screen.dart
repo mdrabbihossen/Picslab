@@ -113,7 +113,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Save Image',
               ),
               IconButton(
-                onPressed: () => increaseFontSize(),
+                onPressed: increaseFontSize,
                 icon: Icon(
                   Icons.add,
                   color: Colors.black,
@@ -121,7 +121,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Increase Font Size',
               ),
               IconButton(
-                onPressed: () =>decreaseFontSize(),
+                onPressed: decreaseFontSize,
                 icon: Icon(
                   Icons.remove,
                   color: Colors.black,
@@ -129,7 +129,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Decrease Font Size',
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: alignLeft,
                 icon: Icon(
                   Icons.format_align_left,
                   color: Colors.black,
@@ -137,7 +137,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Align Left',
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: alignTextCenter,
                 icon: Icon(
                   Icons.format_align_center,
                   color: Colors.black,
@@ -145,7 +145,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Align Center',
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: alignTextRight,
                 icon: Icon(
                   Icons.format_align_right,
                   color: Colors.black,
@@ -153,7 +153,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Align Right',
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: boldText,
                 icon: Icon(
                   Icons.format_bold,
                   color: Colors.black,
@@ -161,7 +161,7 @@ class _EditImageScreenState extends EditImageViewModel {
                 tooltip: 'Bold Text',
               ),
               IconButton(
-                onPressed: () {},
+                onPressed: italicText,
                 icon: Icon(
                   Icons.format_italic,
                   color: Colors.black,

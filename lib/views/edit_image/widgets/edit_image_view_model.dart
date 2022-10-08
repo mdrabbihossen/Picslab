@@ -99,5 +99,53 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
       texts[currentIndex].fontSize -= 1;
     });
   }
+
 // decrease font size end
+  // align text left
+  alignLeft() {
+    setState(() {
+      texts[currentIndex].textAlign = TextAlign.left;
+    });
+  }
+
+// align text left end
+// align text center
+  alignTextCenter() {
+    setState(() {
+      texts[currentIndex].textAlign = TextAlign.center;
+    });
+  }
+
+// align text center end
+// align text right
+  alignTextRight() {
+    setState(() {
+      texts[currentIndex].textAlign = TextAlign.right;
+    });
+  }
+
+// align text right end
+  // bold text
+  boldText() {
+    setState(() {
+      if (texts[currentIndex].fontWeight == FontWeight.bold) {
+        texts[currentIndex].fontWeight = FontWeight.normal;
+      } else {
+        texts[currentIndex].fontWeight = FontWeight.bold;
+      }
+    });
+  }
+
+// bold text end
+// italic text
+  italicText() {
+    setState(() {
+      if (texts[currentIndex].fontStyle == FontStyle.italic) {
+        texts[currentIndex].fontStyle = FontStyle.normal;
+      } else {
+        texts[currentIndex].fontStyle = FontStyle.italic;
+      }
+    });
+  }
+// italic text end
 }
