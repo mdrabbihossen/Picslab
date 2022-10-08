@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pics_lab/common/widgets/showSnackbar.dart';
 
 import 'package:pics_lab/model/text_info.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
@@ -9,9 +10,9 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
   TextEditingController textEditingController = TextEditingController();
   TextEditingController creatorText = TextEditingController();
   List<TextInfo> texts = [];
+  int currentIndex = 0;
 
   // add new text
-
   addNewText(BuildContext context) {
     setState(() {
       texts.add(
@@ -55,7 +56,7 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
             textColor: Colors.black,
           ),
           DefaultButton(
-            onPressed: () =>addNewText(context),
+            onPressed: () => addNewText(context),
             child: Text('Add Text'),
             bgColor: Colors.red,
             textColor: Colors.white,
@@ -64,5 +65,15 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
       ),
     );
   }
+
 // add new dialog end
+
+  // set current index
+  setCurrentIndex(BuildContext context, int index) {
+    setState(() {
+      currentIndex = index;
+    });
+    showSnackBar(context: context, message: 'Selected For Styling');
+  }
+// set current index end
 }
