@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pics_lab/screens/home_screen.dart';
 
 void main() {
   runApp(const MyApp());
@@ -12,6 +13,9 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
+      title: 'Piclab',
+      theme: ThemeData.dark(),
+      home: HomeScreen(),
     );
   }
 }
