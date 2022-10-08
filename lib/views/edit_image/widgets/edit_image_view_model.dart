@@ -4,11 +4,13 @@ import 'package:pics_lab/common/widgets/showSnackbar.dart';
 import 'package:pics_lab/model/text_info.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 import 'package:pics_lab/views/edit_image/widgets/default_button.dart';
+import 'package:screenshot/screenshot.dart';
 
 abstract class EditImageViewModel extends State<EditImageScreen> {
   // controllers and variables
   TextEditingController textEditingController = TextEditingController();
   TextEditingController creatorText = TextEditingController();
+  ScreenshotController screenshotController = ScreenshotController();
   List<TextInfo> texts = [];
   int currentIndex = 0;
 
@@ -172,4 +174,10 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     showSnackBar(context: context, message: 'Text Deleted Successfully');
   }
 // delete text end
+
+// save image to gallery
+ saveImageToGallery(BuildContext context)async{
+
+ }
+// save image to gallery end
 }
