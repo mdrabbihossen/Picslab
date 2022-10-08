@@ -80,6 +80,86 @@ AppBar appBar() => AppBar(
               ),
               tooltip: 'Add New Line',
             ),
+            Tooltip(
+              message: 'Red',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.red,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'White',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.white,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'Black',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.black,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'Blue',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.blue,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'Yellow',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.yellow,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'Green',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.green,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'Orange',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.orange,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
+            Tooltip(
+              message: 'Pink',
+              child: GestureDetector(
+                onTap: () {},
+                child: CircleAvatar(
+                  backgroundColor: Colors.pink,
+                ),
+              ),
+            ),
+            SizedBox(width: 5),
           ],
         ),
       ),
