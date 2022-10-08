@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:image_picker/image_picker.dart';
-import 'package:pics_lab/screens/edit_image_screen.dart';
+
+import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({Key? key}) : super(key: key);
