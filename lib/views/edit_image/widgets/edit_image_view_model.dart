@@ -75,5 +75,29 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
     });
     showSnackBar(context: context, message: 'Selected For Styling');
   }
+
 // set current index end
+// change text color
+  changeTextColor(Color color) {
+    setState(() {
+      texts[currentIndex].color = color;
+    });
+  }
+
+// change text color end
+// increase font size
+  increaseFontSize() {
+    setState(() {
+      texts[currentIndex].fontSize += 1;
+    });
+  }
+
+// increase font size end
+// decrease font size
+  decreaseFontSize() {
+    setState(() {
+      texts[currentIndex].fontSize -= 1;
+    });
+  }
+// decrease font size end
 }
