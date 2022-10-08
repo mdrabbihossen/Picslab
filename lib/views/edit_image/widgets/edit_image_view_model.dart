@@ -6,6 +6,7 @@ import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 abstract class EditImageViewModel extends State<EditImageScreen> {
   // controllers and variables
   TextEditingController textEditingController = TextEditingController();
+  TextEditingController creatorText = TextEditingController();
   List<TextInfo> texts = [];
 
   // add new text
@@ -53,7 +54,7 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
             textColor: Colors.black,
           ),
           DefaultButton(
-            onPressed: () {},
+            onPressed: () =>addNewText(context),
             child: Text('Add Text'),
             bgColor: Colors.red,
             textColor: Colors.white,
