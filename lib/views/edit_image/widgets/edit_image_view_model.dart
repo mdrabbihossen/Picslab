@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:pics_lab/common/widgets/deafult_button.dart';
 import 'package:pics_lab/views/edit_image/screens/edit_image_screen.dart';
 
 abstract class EditImageViewModel extends State<EditImageScreen> {
@@ -20,6 +21,20 @@ abstract class EditImageViewModel extends State<EditImageScreen> {
             hintText: 'Your Text Here...',
           ),
         ),
+        actions: [
+          DefaultButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: Text('Back'),
+            bgColor: Colors.white,
+            textColor: Colors.black,
+          ),
+          DefaultButton(
+            onPressed: () {},
+            child: Text('Add Text'),
+            bgColor: Colors.red,
+            textColor: Colors.white,
+          ),
+        ],
       ),
     );
   }
